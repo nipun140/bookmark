@@ -113,7 +113,6 @@ document.querySelector('.contactUs form').onsubmit = (e) => {
         //send a req to our server
         fetch('http://localhost:3000/sendMail', {
                 method: 'POST',
-                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -131,7 +130,7 @@ document.querySelector('.contactUs form').onsubmit = (e) => {
                     document.querySelector('.contactUs form .errorCont').classList.remove('successClass');
                     document.querySelector('.contactUs form .errorCont').innerHTML = ` <input type="text" name="email" placeholder="enter email" id="email">`;
 
-                }, 2000);
+                }, 3000);
             })
             .catch((error) => {
                 console.error('Error:', error);
