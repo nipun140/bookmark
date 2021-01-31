@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Bookmark landing page</title>
+
+    <link rel="stylesheet" href="sass/main.css">
+
+</head>
+
+<body>
+
+    <nav class="container">
+        <img id="logo" src="images/logo-bookmark.svg" alt="logo" />
+        <ul id="largeScreen">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a class="activeLink" href="#">Login</a></li>
+        </ul>
+        <img id="openBtn" onclick="openModal()" src="images/icon-hamburger.svg" alt="hamburgerbtn">
+        <div class="modalNav">
+            <div class="logo container">
+                <img id="logo" src="images/logo-bookmark.svg" alt="logo" />
+                <img id="closebtn" onclick="closeModal()" src="images/icon-close.svg" alt="hamburgerbtn">
+            </div>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="darkActive" href="#">Login</a></li>
+            </ul>
+            <div class="socialMedia">
+                <span class="fab fa-facebook-square"></span>
+                <span class="fab fa-twitter-square"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero container  -->
+
+    <div class="container heroCont">
+        <div class="row">
+            <div class="col-sm-6 col1 ">
+                <h1> A Simple Bookmark Manager</h1>
+                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+                <div class="btns">
+                    <button class="chromebtn">Get it on Chrome</button>
+                    <button class="firefoxbtn">Get it on Firefox</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="col-sm-6 col2 ">
+                <img src="images/illustration-hero.svg" alt="img">
+                <div class="blueCont"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- features  -->
+    <hr>
+    <div class="container featureCont">
+        <div class="headerContent">
+            <h1>Features</h1>
+            <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        </div>
+        <div class="controls">
+            <div class=" control control1 activeControl">Simple Bookmarking</div>
+            <div class=" control control2">Speedy Searching</div>
+            <div class=" control control3">Easy Sharing</div>
+        </div>
+
+        <div class="features">
+            <div class="feature" id="featureImg">
+                <img src="images/illustration-features-tab-1.svg" alt="img">
+                <div class="blueCont"></div>
+            </div>
+
+            <div class="feature featureContent">
+                <h2>Bookmark in one click</h2>
+                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                <button>More Info</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- extensions  -->
+    <hr>
+    <section class="container">
+        <div class="headerContent">
+            <h1>Download the extension</h1>
+            <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+        </div>
+        <div class="extensions">
+            <div class="extension chrome">
+                <img src="images/logo-chrome.svg" alt="img">
+                <h3>Add to Chrome</h3>
+                <p>Minimum version 62</p>
+                <button>Add & Install Extension</button>
+            </div>
+            <div class="extension firefox">
+                <img src="images/logo-firefox.svg" alt="img">
+                <h3>Add to Firefox</h3>
+                <p>Minimum version 55</p>
+                <button>Add & Install Extension</button>
+            </div>
+            <div class="extension opera">
+                <img src="images/logo-opera.svg" alt="img">
+                <h3>Add to Opera</h3>
+                <p>Minimum version 46</p>
+                <button>Add & Install Extension</button>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <!-- Q&A  -->
+    <div class="faq container">
+        <div class="headerContent">
+            <h1>Frequently Asked Questions</h1>
+            <p>Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+        </div>
+        <div class="quesAns">
+            <div class="qaPair">
+                <div class="question q1">
+                    What is Bookmark?<i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="answer a1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</div>
+            </div>
+            <div class="qaPair">
+                <div class="question q2">
+                    How can I request a new browser?<i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="answer a2">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus
+                    luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                </div>
+            </div>
+            <div class="qaPair">
+                <div class="question q3">
+                    Is there a mobile app?<i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="answer a3">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</div>
+            </div>
+            <div style="border-bottom: 1px solid gray;" class="qaPair">
+                <div class="question q4">
+                    What about other Chromium browsers?<i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="answer a4">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit</div>
+            </div>
+        </div>
+        <button>More Info</button>
+    </div>
+
+    <!-- contact Us  -->
+    <section class="contactUs">
+        <div class="myContainer">
+            <p>35,000+ already joined</p>
+            <h2>Stay up-to-date with what we’re doing</h2>
+            <form method="POST">
+                <div class="errorCont ">
+                    <input type="text" name="email" placeholder="enter email" id="email">
+                </div>
+                <button type="submit">Contact Us</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img id="logo" src="images/logo-bookmark.svg" alt="logo" />
+            <ul>
+                <li><a href="">Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="SocialsInfooter">
+                <span class="fab fa-facebook-square"></span>
+                <span class="fab fa-twitter-square"></span>
+            </div>
+        </div>
+    </footer>
+    <!-- 
+
+
+  Features
+  Pricing
+  Contact -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
