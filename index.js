@@ -104,20 +104,41 @@ function ValidateEmail(mail) {
 //on form submit
 document.querySelector('.contactUs form').onsubmit = (e) => {
     e.preventDefault();
-    let email = document.querySelector('form input').value;
+    let useremail = document.querySelector('form input').value;
 
-    if (ValidateEmail(email)) {
-        document.querySelector('.contactUs form .errorCont').classList.add('successClass');
-        document.querySelector('.contactUs form .errorCont').classList.remove('errorClass');
-        document.querySelector('.contactUs form .errorCont').innerHTML = ` <input type="text" name="email" placeholder="enter email" id="email"><p> Please check your mail!</p>`;
+    if (ValidateEmail(useremail)) {
 
-        setTimeout(() => {
-            document.querySelector('.contactUs form .errorCont').classList.remove('successClass');
-            document.querySelector('.contactUs form .errorCont').innerHTML = ` <input type="text" name="email" placeholder="enter email" id="email">`;
+        console.log('email correct')
 
-        }, 2000);
+        //send a req to our server
+        fetch('http://localhost:3000/sendMail', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: useremail })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data); //data sent from the server 
+
+                document.querySelector('.contactUs form .errorCont').classList.add('successClass');
+                document.querySelector('.contactUs form .errorCont').classList.remove('errorClass');
+                document.querySelector('.contactUs form .errorCont').innerHTML = ` <input type="text" name="email" placeholder="enter email" id="email"><p> Please check your mail!</p>`;
+
+                setTimeout(() => {
+                    document.querySelector('.contactUs form .errorCont').classList.remove('successClass');
+                    document.querySelector('.contactUs form .errorCont').innerHTML = ` <input type="text" name="email" placeholder="enter email" id="email">`;
+
+                }, 2000);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
 
     } else {
+        console.log('email error')
         document.querySelector('.contactUs form .errorCont').classList.add('errorClass');
         document.querySelector('.contactUs form .errorCont').innerHTML = ` <input type="text" name="email" placeholder="enter email" id="email"><p>whoops make sure its an email!</p>`;
 
