@@ -108,6 +108,7 @@ document.querySelector('.contactUs form').onsubmit = (e) => {
 
     if (ValidateEmail(email)) {
         document.querySelector('.contactUs form .errorCont').classList.add('successClass');
+        document.querySelector('.contactUs form .errorCont').classList.remove('errorClass');
         document.querySelector('.contactUs form .errorCont').innerHTML = ` <input type="text" name="email" placeholder="enter email" id="email"><p> Please check your mail!</p>`;
 
         setTimeout(() => {
