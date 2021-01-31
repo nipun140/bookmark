@@ -113,7 +113,7 @@ document.querySelector('.contactUs form').onsubmit = (e) => {
         //send a req to our server
         fetch('http://localhost:3000/sendMail', {
                 method: 'POST',
-                mode: 'cors',
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
