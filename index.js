@@ -111,7 +111,7 @@ document.querySelector('.contactUs form').onsubmit = (e) => {
         console.log('email correct')
 
         //send a req to our server
-        fetch('http://localhost:3000/sendMail', {
+        fetch('https://vast-everglades-29360.herokuapp.com/sendMail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
